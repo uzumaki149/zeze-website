@@ -7,7 +7,9 @@ import LayoutContainer from "../components/ui/LayoutContainer";
 
 function PublicLayout({ children }) {
   return (
-    <div className="min-h-screen bg-transparent">
+    <div className="min-h-screen bg-transparent"
+         onContextMenu={(event) => event.preventDefault()}
+    >
       {/* Mobile */}
       <div className="xl:hidden">
         <MobileHeader />
