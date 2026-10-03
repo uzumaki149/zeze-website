@@ -1,0 +1,128 @@
+@keyframes page-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.page-fade {
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity 350ms ease,
+    transform 350ms ease;
+}
+
+.page-fade.page-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-fade,
+  .page-fade.page-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Circular theme transition */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-new(root) {
+  z-index: 1;
+  animation: theme-reveal 600ms ease-in-out both;
+}
+
+::view-transition-old(root) {
+  z-index: 0;
+}
+
+@keyframes theme-reveal {
+  from {
+    clip-path: circle(
+      0 at var(--theme-reveal-x) var(--theme-reveal-y)
+    );
+  }
+
+  to {
+    clip-path: circle(
+      var(--theme-reveal-radius) at
+      var(--theme-reveal-x) var(--theme-reveal-y)
+    );
+  }
+}
+
+:root {
+  color-scheme: light;
+  --page-background: #e1e2e418;
+  --page-foreground: #18181b;
+}
+
+.dark {
+  color-scheme: dark;
+  --page-background: #09090b;
+  --page-foreground: #cacad3;
+}
+
+body {
+  background-color: var(--page-background);
+  color: var(--page-foreground);
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+.hero-outline {
+  color: transparent;
+  -webkit-text-stroke: 2px #18181b;
+}
+
+.dark .hero-outline {
+  -webkit-text-stroke-color: #f4f4f5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-outline + div img {
+    transition: none;
+  }
+
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+}
+
+@keyframes wordmark-loop {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.wordmark-track {
+  animation: wordmark-loop 18s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wordmark-track {
+    animation: none;
+  }
+}
