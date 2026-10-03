@@ -17,6 +17,9 @@ export const metadata = {
   description:
     "Explore the personal portfolio of Jhan-Zine Maningo, featuring web development projects, blog articles, journal entries, and contact information.",
   applicationName: "Jhan-Zine Maningo Portfolio",
+  verification: {
+    google: "eGcLcnz5VcbmBR-nuRgg5mR8AbYXJzEJ4E_GHOElTDY",
+  },
   authors: [{ name: "Jhan-Zine Maningo" }],
   openGraph: {
     type: "website",
