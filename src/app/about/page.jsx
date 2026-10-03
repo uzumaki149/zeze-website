@@ -4,14 +4,9 @@ import Biography from "../../features/about/components/Biography";
 import ContactSection from "../../features/about/components/ContactSection";
 
 export const metadata = {
-  title: {
-    default: "About",
-    template: "%s | Jhan-Zine Maningo",
-  },
-  description: "Learn more about Jhan-Zine Maningo, a passionate web developer and designer.",
-  icons: {
-    icon: "/mej.png",
-  },
+  title: "About",
+  description:
+    "Learn more about Jhan-Zine Maningo, a web developer and designer from the Philippines.",
 };
 
 function AboutPage() {

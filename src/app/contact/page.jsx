@@ -2,14 +2,9 @@ import ContactForm from "../../features/contact/components/ContactForm";
 
 
 export const metadata = {
-  title: {
-    default: "Contact",
-    template: "%s | Jhan-Zine Maningo",
-  },
-  description: "Get in touch with Jhan-Zine Maningo.",
-  icons: {
-    icon: "/mej.png",
-  },
+  title: "Contact",
+  description:
+    "Contact Jhan-Zine Maningo for questions, collaboration, and web development opportunities.",
 };
 
 export default function ContactPage() {

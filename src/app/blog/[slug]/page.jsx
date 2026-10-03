@@ -13,7 +13,7 @@ export async function generateMetadata({ params }) {
 
   if (!post) {
     return {
-      title: "Article Not Found | Jhan-Zine Maningo",
+      title: "Article Not Found",
       description: "The requested article could not be found.",
       icons: {
         icon: "/mej.png",
@@ -22,7 +22,7 @@ export async function generateMetadata({ params }) {
   }
 
   return {
-    title: `${post.title} | Jhan-Zine Maningo`,
+    title: post.title,
     description: post.excerpt,
     icons: {
       icon: "/mej.png",

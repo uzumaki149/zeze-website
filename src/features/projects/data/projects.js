@@ -1,14 +1,12 @@
 export const projects = [
   {
     id: 1,
-    slug: "personal-portfolio-website",
     title: "Personal Portfolio Website",
-    description:
-      "A portfolio site built with React, Vite, and Tailwind-like styling.",
+    description: "My personal portfolio website.",
     image: null,
     category: "Web Development",
-    date: null,
-    technologies: ["React", "Vite", "CSS"],
+    technologies: ["Next.js", "React", "Tailwind CSS"],
+    liveUrl: "https://zeze-website.vercel.app",
   },
   {
     id: 2,

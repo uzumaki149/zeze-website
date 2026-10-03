@@ -1,4 +1,3 @@
-
 import { notFound } from "next/navigation";
 
 import { journalEntries } from "../../../features/journal/data/journalEntries";
@@ -26,7 +25,7 @@ export async function generateMetadata({ params }) {
   }
 
   return {
-    title: `${entry.title} | Jhan-Zine Maningo`,
+    title: entry.title,
     description: entry.excerpt,
   };
 }
